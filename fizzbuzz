@@ -1,0 +1,25 @@
+#include <vector>
+#include <string>
+
+class Solution {
+public:
+    std::vector<std::string> fizzBuzz(int n) {
+        std::vector<std::string> fizzbuzz;
+        std::string fizz;
+        fizz = "";
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+               fizz = "FizzBuzz";
+            } else if (i % 3 == 0) {
+                fizz = "Fizz";
+            } else if (i % 5 == 0) {
+               fizz = "Buzz";
+            } else {
+                fizz = std::to_string(i);
+            }
+            fizzbuzz.push_back(fizz);
+        }
+        
+        return fizzbuzz;
+    }
+};
